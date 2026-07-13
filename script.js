@@ -4,6 +4,10 @@ const list = document.getElementById("task-list");
 
 button.addEventListener("click", function () {
 
+    if (input.value.trim() === "") {
+        return;
+    }
+
     const li = document.createElement("li");
 
     li.textContent = input.value;
