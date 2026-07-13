@@ -1,7 +1,3 @@
-const input = document.getElementById("task-input");
-const button = document.getElementById("add-btn");
-const list = document.getElementById("task-list");
-
 button.addEventListener("click", function () {
 
     if (input.value.trim() === "") {
@@ -11,6 +7,12 @@ button.addEventListener("click", function () {
     const li = document.createElement("li");
 
     li.textContent = input.value;
+
+    const deleteButton = document.createElement("button");
+
+    deleteButton.textContent = "Delete";
+
+    li.appendChild(deleteButton);
 
     list.appendChild(li);
 
